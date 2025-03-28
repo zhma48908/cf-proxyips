@@ -26,7 +26,7 @@ jobs:
         run: curl https://zip.baipiao.eu.org > txt.zip
 
       - name: Generate list
-        run: go run . txt.zip
+        run: go run . -thread 64 txt.zip
 
       - name: Commit changes
         run: |
